@@ -1,0 +1,44 @@
+# coding: utf-8
+# ==================================================
+#  yt-dlp 全局配置模板
+#  启用方式：双击 安装全局配置.bat，或手动复制到
+#            %APPDATA%\yt-dlp\config
+#  规则：一行一个参数；# 开头是注释；- 与 -- 后不能有空格
+#  临时忽略全部配置：命令后加 --ignore-config
+# ==================================================
+
+# ---------- 输出位置与命名 ----------
+-P "%USERPROFILE%\Videos\yt-dlp"
+-o "%(uploader,channel,creator|Unknown)s\%(upload_date>%Y-%m-%d)s - %(title)s [%(id)s].%(ext)s"
+
+# ---------- 画质与容器 ----------
+-S res:1080,vcodec:h264,acodec:aac
+--merge-output-format mp4
+
+# ---------- 元数据与封面 ----------
+--embed-metadata
+--write-thumbnail
+--convert-thumbnails jpg
+
+# ---------- 网络稳健性 ----------
+--retries 10
+--fragment-retries 10
+--concurrent-fragments 8
+--windows-filenames
+--no-mtime
+
+# ---------- 代理（按需打开） ----------
+# --proxy http://127.0.0.1:10808
+
+# ---------- 登录态（需要登录/会员的站点，按需打开） ----------
+# --cookies-from-browser edge
+
+# ---------- 字幕（按需打开） ----------
+# --write-subs
+# --write-auto-subs
+# --sub-langs zh.*,en.*
+# --embed-subs
+# --convert-subs srt
+
+# ---------- YouTube 去广告段（按需打开） ----------
+# --sponsorblock-remove default

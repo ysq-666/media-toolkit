@@ -1,0 +1,4 @@
+# Windows 优先的仓库：.bat 强制 CRLF，避免 cmd 换行问题；其余按系统默认处理。
+* text=auto
+*.bat text eol=crlf
+*.cmd text eol=crlf

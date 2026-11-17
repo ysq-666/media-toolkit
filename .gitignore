@@ -1,0 +1,28 @@
+# ------------------------------------------------------------------
+# 素材工具包 · GitHub 仓库忽略规则 (.gitignore)
+# 严禁将个人 API Key、浏览器导出 Cookie 与大体积产出文件提交至公开仓库！
+# ------------------------------------------------------------------
+
+# 1. 敏感凭据与个人登录态快照 (高危)
+summarize/llm_config.txt
+download/cookies.txt
+download/cookies-src/
+xhs/cookies.txt
+
+# 2. 本机个人路径与去重记录
+download/OUT.txt
+download/downloaded-youtube.txt
+xhs/OUT.txt
+
+# 3. 运行时产出文件与临时缓存
+summarize/out/
+scrape/output/
+*.wav
+*.mp4
+*.mp3
+*.part
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec

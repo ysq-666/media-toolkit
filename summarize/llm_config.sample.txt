@@ -1,0 +1,7 @@
+# 把这个文件复制成 llm_config.txt，填上你的 key，就能让「视频总结.bat」生成真正的 AI 总结
+# 支持任何 OpenAI 兼容接口（官方 / 中转 / 本地 Ollama 等）
+# 环境变量 OPENAI_API_KEY / OPENAI_BASE_URL / OPENAI_MODEL 优先级更高
+
+KEY=sk-在这里填你的key
+BASE=https://api.openai.com/v1
+MODEL=gpt-4o-mini
